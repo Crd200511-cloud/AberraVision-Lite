@@ -1,0 +1,16 @@
+{
+  "purpose": "single formal fixed-defocus experiment",
+  "best_epoch": 25,
+  "initial_train_l1": 0.03889810672029853,
+  "initial_validation_l1": 0.03881795695051551,
+  "best_validation_l1": 0.03123283516615629,
+  "last_train_l1": 0.03146723117679358,
+  "last_validation_l1": 0.0313205168582499,
+  "total_train_and_monitor_seconds": 468.7266287080711,
+  "median_training_epoch_seconds_excluding_first": 8.039674500003457,
+  "median_monitoring_epoch_seconds_excluding_initial": 7.280740583024453,
+  "reload_prediction_max_abs_difference": 0.0,
+  "reloaded_best_validation_l1": 0.03123283516615629,
+  "test_sources_loaded": false,
+  "formal_training_completed": true
+}

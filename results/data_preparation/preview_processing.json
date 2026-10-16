@@ -1,0 +1,144 @@
+{
+  "purpose": "training-candidate teaching preview only",
+  "formal_settings_frozen": false,
+  "samples": [
+    {
+      "id": "0356",
+      "project_split": "train",
+      "preprocessing": {
+        "source_sha256": "037948b1a5ddff68b7701f636c0fd005e3daba56a07751bdb389696758139e13",
+        "oriented_source_size_wh": [
+          2040,
+          1272
+        ],
+        "scene_size_hw": [
+          384,
+          384
+        ],
+        "color_rule": "untagged RGB assumed sRGB",
+        "preprocessing": "sRGB inverse transfer -> linear Rec.709 luminance -> BOX resize shorter side -> center crop",
+        "resized_size_wh": [
+          616,
+          384
+        ],
+        "crop_box_ltrb": [
+          116,
+          0,
+          500,
+          384
+        ],
+        "per_image_contrast_stretch": false
+      },
+      "optics": {
+        "defocus_waves": 0.15,
+        "defocus_unit": "RMS waves on a continuous unit circular pupil",
+        "pupil_diameter": 128,
+        "fft_size": 512,
+        "kernel_size": 129,
+        "q_step": 0.25,
+        "q_unit": "lambda*f/D",
+        "crop_energy_fraction": 0.9886393523972381,
+        "lost_energy_fraction": 0.011360647602761897,
+        "energy_reference": "full discrete FFT grid before crop normalization",
+        "pupil_nonzero_pixels": 12853,
+        "sampled_wavefront_rms_waves": 0.1498282269275305,
+        "kernel_origin": [
+          64,
+          64
+        ],
+        "boundary": "periodic",
+        "sampling": "point-sampled image plane; no pixel-area integration",
+        "noise_sigma": 0.01,
+        "seed": 100356,
+        "noise_model": "additive independent Gaussian",
+        "observation_clipped": false
+      },
+      "wiener_k": 0.001,
+      "display_range": [
+        0,
+        1
+      ],
+      "raw_values_clipped": false,
+      "detail_crop_ltrb": [
+        128,
+        128,
+        256,
+        256
+      ],
+      "teaching_l1": {
+        "observed": 0.09812148887695035,
+        "wiener": 0.06708930850951347
+      },
+      "teaching_l1_rule": "mean absolute error on the fixed center 128x128; both predictions clipped to [0,1]; not formal evaluation"
+    },
+    {
+      "id": "0223",
+      "project_split": "train",
+      "preprocessing": {
+        "source_sha256": "bd9961cfc41aebfbfe90626013f41c8130e575f7841d1224136936ea1c6952eb",
+        "oriented_source_size_wh": [
+          2040,
+          1356
+        ],
+        "scene_size_hw": [
+          384,
+          384
+        ],
+        "color_rule": "untagged RGB assumed sRGB",
+        "preprocessing": "sRGB inverse transfer -> linear Rec.709 luminance -> BOX resize shorter side -> center crop",
+        "resized_size_wh": [
+          578,
+          384
+        ],
+        "crop_box_ltrb": [
+          97,
+          0,
+          481,
+          384
+        ],
+        "per_image_contrast_stretch": false
+      },
+      "optics": {
+        "defocus_waves": 0.15,
+        "defocus_unit": "RMS waves on a continuous unit circular pupil",
+        "pupil_diameter": 128,
+        "fft_size": 512,
+        "kernel_size": 129,
+        "q_step": 0.25,
+        "q_unit": "lambda*f/D",
+        "crop_energy_fraction": 0.9886393523972381,
+        "lost_energy_fraction": 0.011360647602761897,
+        "energy_reference": "full discrete FFT grid before crop normalization",
+        "pupil_nonzero_pixels": 12853,
+        "sampled_wavefront_rms_waves": 0.1498282269275305,
+        "kernel_origin": [
+          64,
+          64
+        ],
+        "boundary": "periodic",
+        "sampling": "point-sampled image plane; no pixel-area integration",
+        "noise_sigma": 0.01,
+        "seed": 100223,
+        "noise_model": "additive independent Gaussian",
+        "observation_clipped": false
+      },
+      "wiener_k": 0.001,
+      "display_range": [
+        0,
+        1
+      ],
+      "raw_values_clipped": false,
+      "detail_crop_ltrb": [
+        128,
+        128,
+        256,
+        256
+      ],
+      "teaching_l1": {
+        "observed": 0.030930524929653643,
+        "wiener": 0.040026644487779574
+      },
+      "teaching_l1_rule": "mean absolute error on the fixed center 128x128; both predictions clipped to [0,1]; not formal evaluation"
+    }
+  ]
+}

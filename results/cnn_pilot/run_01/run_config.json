@@ -1,0 +1,106 @@
+{
+  "config": {
+    "purpose": "small-sample pipeline and timing pilot; not formal research run",
+    "train_sources": 8,
+    "validation_sources": 4,
+    "epochs": 12,
+    "seed": 20261012,
+    "learning_rate": 0.0005,
+    "optimizer": "Adam",
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "weight_decay": 0,
+    "patches_per_image_per_epoch": 4,
+    "batch_size": 4,
+    "scored_patch_size": 128,
+    "context_halo": 5,
+    "loss": "L1 on unclipped outputs; inner 128x128 of 138x138 input patch",
+    "monitoring": "both curves use full-image center 256x256 L1 after clipping predictions",
+    "checkpoint_rule": "minimum validation monitoring L1, including epoch 0; earliest on exact ties",
+    "architecture": "five 3x3 convolutions: 2-32-32-32-32-1, ReLU after first four; residual sum",
+    "initialization": "PyTorch default hidden layers; zero final convolution",
+    "noise": "one fixed realization per source; seed 100000+ID",
+    "augmentation": "none; random crop positions only",
+    "cpu_threads": 4,
+    "device": "cpu",
+    "deterministic_algorithms": true,
+    "parameter_count": 28641
+  },
+  "provenance": {
+    "data_manifest_sha256": "b534d6486fcec8da901899a4e37a15f9df5a587f031a327c1ad48123fbf4e4a4",
+    "wiener_selection_sha256": "91e28d1125c0e95a48bb6b5d03242700ede28759e814d3b118ed14f4778c95a8",
+    "selected_k": 0.01,
+    "protocol": {
+      "k_candidates": [
+        0.0001,
+        0.001,
+        0.003,
+        0.01,
+        0.03
+      ],
+      "selection_metric": "minimum mean per-image validation L1; first ascending K wins exact ties",
+      "optics": {
+        "defocus_waves": 0.15,
+        "pupil_diameter": 128,
+        "fft_size": 512,
+        "kernel_size": 129
+      },
+      "noise_sigma": 0.01,
+      "noise_seed_rule": "100000 + integer source ID",
+      "scene_size": 384,
+      "score_crop_ltrb": [
+        64,
+        64,
+        320,
+        320
+      ],
+      "score_output_processing": "clip predictions to [0,1]; retain raw observations and restorations",
+      "convergence_training_ids": [
+        "0356",
+        "0223"
+      ],
+      "convergence_max_abs_tolerances": {
+        "pupil_refinement": 0.002,
+        "kernel_extension": 0.015
+      },
+      "test_restorations_accessed": false
+    },
+    "source_ids": {
+      "train": [
+        "0356",
+        "0223",
+        "0742",
+        "0317",
+        "0596",
+        "0504",
+        "0739",
+        "0325"
+      ],
+      "validation": [
+        "0536",
+        "0698",
+        "0516",
+        "0438"
+      ]
+    },
+    "test_sources_loaded": false
+  },
+  "environment": {
+    "torch": "2.14.1",
+    "numpy": "2.5.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.14",
+    "mps_built": true,
+    "mps_available": false
+  },
+  "code_sha256": {
+    "pilot_train.py": "37f97429fdcb803194e1fc482eb797a8b813e0f6caccc968252a088a040f99bd",
+    "src/model.py": "a0e36ef65c737cdd82340b0d1bae9516a301e4419cc7241ebad649c104cdc8e7",
+    "src/training.py": "d8215113ff1f7b79a1dde46dd2e2c23e92a621b94a06b85d09258c37275e1710",
+    "src/optics.py": "a5dc63776d842771ad2aaa4addea67ac703a53b95e0d4b8b344d685f8f235530",
+    "src/baseline.py": "aeec2d690b557a5f95ab36eddf6f2619bc8f45209c67548f3eac2fdfad064401"
+  }
+}

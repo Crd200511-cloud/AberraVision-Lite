@@ -1,0 +1,9 @@
+{
+  "status": "pending_visual_review",
+  "source_count": 150,
+  "exact_checks": "source bytes, oriented decoded RGB, preprocessed scene pixels",
+  "near_duplicate_screen": "63-bit DCT pHash <= 8 on full image or center scene; rotations and mirrors",
+  "limitations": "Heuristic screening may miss recrops, different exposures, or other same-scene images.",
+  "restoration_test_scores_computed": false,
+  "pairs": []
+}

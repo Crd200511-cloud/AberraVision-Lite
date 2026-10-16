@@ -1,0 +1,41 @@
+{
+  "purpose": "self-generated demonstration, not a benchmark or extra training condition",
+  "checkpoint_sha256": "05c43f9425fcfb3e23fad3c6e75d3ff1c00501f1226609fc5de9388727397ba3",
+  "checkpoint_epoch": 25,
+  "noise_seed": 20261013,
+  "optics": {
+    "defocus_waves": 0.15,
+    "defocus_unit": "RMS waves on a continuous unit circular pupil",
+    "pupil_diameter": 128,
+    "fft_size": 512,
+    "kernel_size": 129,
+    "q_step": 0.25,
+    "q_unit": "lambda*f/D",
+    "crop_energy_fraction": 0.9886393523972381,
+    "lost_energy_fraction": 0.011360647602761897,
+    "energy_reference": "full discrete FFT grid before crop normalization",
+    "pupil_nonzero_pixels": 12853,
+    "sampled_wavefront_rms_waves": 0.1498282269275305,
+    "kernel_origin": [
+      64,
+      64
+    ],
+    "boundary": "periodic",
+    "sampling": "point-sampled image plane; no pixel-area integration",
+    "noise_sigma": 0.01,
+    "seed": 20261013,
+    "noise_model": "additive independent Gaussian",
+    "observation_clipped": false
+  },
+  "wiener_k": 0.01,
+  "display_range": [
+    0,
+    1
+  ],
+  "display_crop_ltrb": [
+    64,
+    64,
+    320,
+    320
+  ]
+}

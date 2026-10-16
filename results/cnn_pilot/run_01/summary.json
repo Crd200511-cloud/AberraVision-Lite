@@ -1,0 +1,16 @@
+{
+  "purpose": "small-sample pipeline and timing pilot; not formal research run",
+  "best_epoch": 11,
+  "initial_train_l1": 0.04872743273153901,
+  "initial_validation_l1": 0.040613967925310135,
+  "best_validation_l1": 0.039146166294813156,
+  "last_train_l1": 0.04631713009439409,
+  "last_validation_l1": 0.03925684280693531,
+  "total_train_and_monitor_seconds": 17.22060041700024,
+  "median_training_epoch_seconds_excluding_first": 0.6384917499963194,
+  "median_monitoring_epoch_seconds_excluding_initial": 0.7193090625223704,
+  "reload_prediction_max_abs_difference": 0.0,
+  "reloaded_best_validation_l1": 0.039146166294813156,
+  "test_sources_loaded": false,
+  "formal_training_completed": false
+}

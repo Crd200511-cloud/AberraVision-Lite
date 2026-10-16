@@ -1,0 +1,35 @@
+{
+  "k_candidates": [
+    0.0001,
+    0.001,
+    0.003,
+    0.01,
+    0.03
+  ],
+  "selection_metric": "minimum mean per-image validation L1; first ascending K wins exact ties",
+  "optics": {
+    "defocus_waves": 0.15,
+    "pupil_diameter": 128,
+    "fft_size": 512,
+    "kernel_size": 129
+  },
+  "noise_sigma": 0.01,
+  "noise_seed_rule": "100000 + integer source ID",
+  "scene_size": 384,
+  "score_crop_ltrb": [
+    64,
+    64,
+    320,
+    320
+  ],
+  "score_output_processing": "clip predictions to [0,1]; retain raw observations and restorations",
+  "convergence_training_ids": [
+    "0356",
+    "0223"
+  ],
+  "convergence_max_abs_tolerances": {
+    "pupil_refinement": 0.002,
+    "kernel_extension": 0.015
+  },
+  "test_restorations_accessed": false
+}

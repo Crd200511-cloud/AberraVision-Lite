@@ -1,0 +1,16 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+data/
+*.pyc
+results/learning/*.npz
+results/wiener_learning/*.npz
+results/learning/preview_data.json
+results/data_preview/
+results/cnn_pilot/**/*.pt
+results/formal/**/*.pt
+results/test_arrays/
+dist/

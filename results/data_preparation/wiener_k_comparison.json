@@ -1,0 +1,28 @@
+{
+  "purpose": "user-directed teaching comparison, not validation or test evaluation",
+  "only_changed_parameter": "K",
+  "raw_outputs_clipped": false,
+  "score_rule": "clip predictions to [0,1], then L1 on fixed center [128:256,128:256]",
+  "samples": [
+    {
+      "id": "0356",
+      "old_k": 0.001,
+      "new_k": 0.01,
+      "source_npz_sha256": "96a801a63790666069dc72246fc11a76104e521395d4f9aa7943bacde9cf7dbe",
+      "teaching_l1": {
+        "before": 0.06708930850951347,
+        "after": 0.06844070473573444
+      }
+    },
+    {
+      "id": "0223",
+      "old_k": 0.001,
+      "new_k": 0.01,
+      "source_npz_sha256": "0796962764f1608263414f8d8708ed6f6f85b969a9f29d5f536668565553272a",
+      "teaching_l1": {
+        "before": 0.040026644487779574,
+        "after": 0.022989463125206652
+      }
+    }
+  ]
+}

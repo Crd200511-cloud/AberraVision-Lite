@@ -1,0 +1,76 @@
+{
+  "status": "frozen_before_formal_training_and_test",
+  "date": "2026-10-13",
+  "data_manifest_sha256": "b534d6486fcec8da901899a4e37a15f9df5a587f031a327c1ad48123fbf4e4a4",
+  "wiener_selection_sha256": "91e28d1125c0e95a48bb6b5d03242700ede28759e814d3b118ed14f4778c95a8",
+  "training": {
+    "purpose": "single formal fixed-defocus experiment",
+    "train_sources": 100,
+    "validation_sources": 20,
+    "epochs": 30,
+    "seed": 20261013,
+    "learning_rate": 0.0005,
+    "optimizer": "Adam",
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "weight_decay": 0,
+    "patches_per_image_per_epoch": 4,
+    "batch_size": 4,
+    "scored_patch_size": 128,
+    "context_halo": 5,
+    "loss": "L1 on unclipped outputs; inner 128x128 of 138x138 input patch",
+    "monitoring": "both curves use full-image center 256x256 L1 after clipping predictions",
+    "checkpoint_rule": "minimum validation monitoring L1, including epoch 0; earliest on exact ties",
+    "architecture": "five 3x3 convolutions: 2-32-32-32-32-1, ReLU after first four; residual sum",
+    "initialization": "PyTorch default hidden layers; zero final convolution",
+    "noise": "one fixed realization per source; seed 100000+ID",
+    "augmentation": "none; random crop positions only",
+    "cpu_threads": 4,
+    "formal_training": true
+  },
+  "budget_reason": "30 epochs based on pilot timing; no early stopping, no post-test tuning, fresh initialization",
+  "evaluation": {
+    "test_count": 30,
+    "score_crop_ltrb": [
+      64,
+      64,
+      320,
+      320
+    ],
+    "clip_all_predictions": [
+      0,
+      1
+    ],
+    "data_range": 1.0,
+    "ssim": {
+      "data_range": 1.0,
+      "channel_axis": null,
+      "gaussian_weights": true,
+      "sigma": 1.5,
+      "win_size": 11,
+      "use_sample_covariance": false,
+      "K1": 0.01,
+      "K2": 0.03
+    },
+    "statistics": "per-original-image scores and arithmetic means; paired CNN minus Wiener deltas",
+    "noise_seed_rule": "100000+integer source ID",
+    "primary_comparison": "Wiener+CNN versus Wiener",
+    "fixed_example_ids": [
+      "0189",
+      "0336"
+    ],
+    "failure_example_rule": "minimum per-image PSNR delta CNN minus Wiener; source ID breaks ties; include even if every delta is positive",
+    "no_test_parameter_selection": true
+  },
+  "limitations": [
+    "fixed PSF and noise",
+    "synthetic observations from sRGB-derived scene proxies",
+    "periodic boundary",
+    "single training seed",
+    "finite PSF crop",
+    "source-duplicate screening is heuristic"
+  ]
+}

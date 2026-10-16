@@ -1,0 +1,24 @@
+{
+  "archive_url": "https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip",
+  "archive_etag": "\"d270bcc1-5487e5c18d636\"",
+  "archive_bytes": 3530603713,
+  "transferred_bytes": 8214015,
+  "files": [
+    {
+      "id": "0356",
+      "project_split": "train",
+      "archive_member": "DIV2K_train_HR/0356.png",
+      "path": "data/raw/DIV2K_train_HR/0356.png",
+      "sha256": "037948b1a5ddff68b7701f636c0fd005e3daba56a07751bdb389696758139e13",
+      "bytes": 4078228
+    },
+    {
+      "id": "0223",
+      "project_split": "train",
+      "archive_member": "DIV2K_train_HR/0223.png",
+      "path": "data/raw/DIV2K_train_HR/0223.png",
+      "sha256": "bd9961cfc41aebfbfe90626013f41c8130e575f7841d1224136936ea1c6952eb",
+      "bytes": 4005613
+    }
+  ]
+}

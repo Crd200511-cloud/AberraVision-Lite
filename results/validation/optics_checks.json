@@ -1,0 +1,34 @@
+{
+  "purpose": "stage_1_numerical_checks_not_reconstruction_benchmark",
+  "default_psf": {
+    "defocus_waves": 0.15,
+    "defocus_unit": "RMS waves on a continuous unit circular pupil",
+    "pupil_diameter": 128,
+    "fft_size": 512,
+    "kernel_size": 129,
+    "q_step": 0.25,
+    "q_unit": "lambda*f/D",
+    "crop_energy_fraction": 0.9886393523972381,
+    "lost_energy_fraction": 0.011360647602761897,
+    "energy_reference": "full discrete FFT grid before crop normalization",
+    "pupil_nonzero_pixels": 12853,
+    "sampled_wavefront_rms_waves": 0.1498282269275305,
+    "kernel_origin": [
+      64,
+      64
+    ],
+    "boundary": "periodic",
+    "sampling": "point-sampled image plane; no pixel-area integration"
+  },
+  "psf_sum": 1.0,
+  "airy_max_profile_error": 0.0003969209538351448,
+  "airy_first_dark_ring_q_numerical": 1.25,
+  "airy_first_dark_ring_q_analytic": 1.21966989,
+  "airy_validation_q_step": 0.0625,
+  "refined_q_step": 0.25,
+  "grid_refinement_psf_l1": 0.004164396271472368,
+  "grid_refinement_image_max_abs": 0.00018071425035359745,
+  "extended_kernel_energy_fraction": 0.9948482708927775,
+  "kernel_extension_image_max_abs": 0.0043605493629063075,
+  "note": "Tolerances are documented in tests/test_optics.py. Crop energy is relative to a finite FFT grid, not the infinite optical plane."
+}

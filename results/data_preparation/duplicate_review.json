@@ -1,0 +1,24 @@
+{
+  "status": "review_complete",
+  "reviewer": "assistant; user did not perform this audit",
+  "prepared_index_sha256": "4eac8aad16c736a77e1ec519a85965fd5bec5f7f7459ff45324da8d6533cf5a7",
+  "screening_sha256": "b7b116552ade9d48f4eef36f561675e7a710557adc6ca4eeabf0d6d215fcbffb",
+  "contact_sheets_reviewed": [
+    "results/data_preview/audit/sources_1.jpg",
+    "results/data_preview/audit/sources_2.jpg",
+    "results/data_preview/audit/sources_3.jpg"
+  ],
+  "findings": "No exact duplicates or pHash <= 8 candidates; visual source contact-sheet review found no evident repeated photo across splits.",
+  "related_source_groups": [
+    {
+      "ids": [
+        "0207",
+        "0655"
+      ],
+      "observation": "Different views/crops of the same elephant museum exhibit; both retained in train."
+    }
+  ],
+  "unresolved_pairs": [],
+  "limitations": "Thumbnail and hash screening cannot prove full scene independence or rule out all overlapping-source images.",
+  "test_restoration_outputs_or_metrics_reviewed": false
+}

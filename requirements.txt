@@ -1,0 +1,11 @@
+# Python 3.12 is tested. Optics, plotting, and the small CNN pilot.
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pillow==12.3.0
+pytest==9.1.1
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0
+torch==2.14.1
+scikit-image==0.26.0
